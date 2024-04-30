@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Feedback Collection</title>
+  <style>
+    /* Navbar styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    #option {
+      margin-left: auto;
+    }
+
+    /* Introduction section styles */
+    .introduction {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .introduction h2 {
+      margin-bottom: 10px;
+    }
+
+    .introduction p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Customer Feedback Collection</h1>
+
+<nav>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <div class="dropdown">
+      <a href="#">Forms</a>
+      <div class="dropdown-content">
+        <a href="customerForm.html">Customer</a>
+        <a href="employeeForm.html">Employee</a>
+        <a href="productForm.html">Product</a>
+        <a href="feedbackForm.html">Feedback</a>
+        <a href="ratingForm.html">Ratings</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Tables</a>
+      <div class="dropdown-content">
+        <a href="#">Customer</a>
+        <a href="#">Employee</a>
+        <a href="#">Product</a>
+        <a href="#">Feedback</a>
+        <a href="#">Ratings</a>
+      </div>
+    </div>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <div class="dropdown" id="option">
+      <a href="#">Option</a>
+      <div class="dropdown-content">
+        <a href="#">Register</a>
+        <a href="#">Log in</a>
+        <a href="#">Log out</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="introduction">
+  <h2>Welcome to our Customer Feedback Collection Website</h2>
+  <p>At our website, we are dedicated to collecting valuable feedback from our customers. Your opinions matter to us, and we strive to improve our products and services based on your input.</p>
+</div>
+
+</body>
+</html>
