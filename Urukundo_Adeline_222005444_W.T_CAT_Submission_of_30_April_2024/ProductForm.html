@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management System</title>
+  <style>
+    /* Basic styling for form layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    textarea,
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    input[type="submit"],
+    input[type="button"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <h2>Add Product</h2>
+  <form id="addProductForm" action="add_product.php" method="post">
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName" required>
+    
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+    
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" min="0" step="0.01" required>
+    
+    <input type="submit" value="Add">
+    <input type="button" value="Clear" onclick="clearForm('addProductForm')">
+  </form>
+</div>
+
+<div>
+  <h2>Update Product</h2>
+  <form id="updateProductForm" action="update_product.php" method="post">
+    <label for="updateProductId">Product ID:</label>
+    <input type="text" id="updateProductId" name="updateProductId" required>
+    
+    <label for="updatePrice">Price:</label>
+    <input type="number" id="updatePrice" name="updatePrice" min="0" step="0.01" required>
+    
+    <input type="submit" value="Update">
+    <input type="button" value="Clear" onclick="clearForm('updateProductForm')">
+  </form>
+</div>
+
+<div>
+  <h2>Delete Product</h2>
+  <form id="deleteProductForm" action="delete_product.php" method="post">
+    <label for="deleteProductId">Product ID:</label>
+    <input type="text" id="deleteProductId" name="deleteProductId" required>
+    
+    <input type="submit" value="Delete">
+    <input type="button" value="Clear" onclick="clearForm('deleteProductForm')">
+  </form>
+</div>
+
+<script>
+  // Function to clear form fields
+  function clearForm(formId) {
+    document.getElementById(formId).reset();
+  }
+</script>
+
+</body>
+</html>
